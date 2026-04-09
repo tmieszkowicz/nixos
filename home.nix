@@ -4,11 +4,11 @@
   imports = [
     ./programs/discord.nix
     ./programs/git.nix
+    ./programs/librewolf.nix
     ./programs/netflix.nix
+    ./programs/obsidian.nix
     ./programs/spotify.nix
     ./programs/zed-editor.nix
-    ./programs/librewolf.nix
-    ./programs/obsidian.nix
   ];
 
   home.username = "wiqht";
