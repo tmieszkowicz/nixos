@@ -1,9 +1,10 @@
 { pkgs, ... }:
-
+let
+  vencord = pkgs.discord.override { withVencord = true; };
+in
 {
   programs.discord = {
     enable = true;
-
-    package = pkgs.discord.override { withVencord = true; };
+    package = vencord;
   };
 }
