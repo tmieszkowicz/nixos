@@ -51,6 +51,31 @@
         autoStash = true;
         missingCommitCheck = "warn";
       };
+
+      # --- COLORS ---------
+      "color \"blame\"" = {
+        highlightRecent = "black bold,1 year ago,white,1 month ago,default,7 days ago,blue";
+      };
+      "color \"branch\"" = {
+        current = "magenta";
+        local = "default";
+        remote = "yellow";
+        upstream = "green";
+        plain = "blue";
+      };
+      "color \"diff\"" = {
+        meta = "black bold";
+        frag = "magenta";
+        context = "white";
+        whitespace = "yellow reverse";
+        old = "red";
+      };
+      "color \"decorate\"" = {
+        HEAD = "red";
+        branch = "blue";
+        tag = "yellow";
+        remoteBranch = "magenta";
+      };
     };
   };
 
