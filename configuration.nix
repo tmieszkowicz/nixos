@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./core/pipewire.nix
     ./core/steam.nix
+    ./core/auto-upgrade.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
