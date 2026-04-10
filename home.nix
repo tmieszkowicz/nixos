@@ -11,6 +11,7 @@
     ./programs/spotify.nix
     ./programs/zed-editor.nix
     ./programs/mpv.nix
+    ./programs/development.nix
   ];
 
   home.username = "wiqht";
