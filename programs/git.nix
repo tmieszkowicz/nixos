@@ -18,6 +18,11 @@
         defaultBranch = "main";
       };
 
+      blame = {
+        coloring = "highlightRecent";
+        date = "relative";
+      };
+
       log = {
         abbrevCommit = true;
         graphColors = "blue,yellow,cyan,magenta,green,red";
@@ -49,7 +54,7 @@
 
       rebase = {
         autoStash = true;
-        missingCommitCheck = "warn";
+        missingCommitsCheck = "warn";
       };
 
       # --- COLORS ---------
@@ -83,7 +88,7 @@
     enable = true;
     enableGitIntegration = true;
     settings = {
-      markEmptyLines = true;
+      markEmptyLines = false;
     };
   };
 }
