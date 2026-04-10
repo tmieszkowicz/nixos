@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./core/pipewire.nix
+    ./core/steam.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -51,9 +52,6 @@
       kdePackages.kate
     ];
   };
-
-  programs.steam.enable = true;
-  #programs.gamemode.enable = true;
 
   environment.systemPackages = with pkgs; [
     neovim
