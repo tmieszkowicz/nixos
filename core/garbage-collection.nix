@@ -1,4 +1,6 @@
 {
+  boot.loader.systemd-boot.configurationLimit = 14;
+
   nix.gc = {
     automatic = true;
     dates = "weekly";
