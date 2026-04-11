@@ -36,8 +36,8 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager = {
     sddm.enable = true;
-    autoLogin.enable = true;
-    autoLogin.user = "wiqht";
+    # autoLogin.enable = true;
+    # autoLogin.user = "wiqht";
   };
   services.desktopManager.plasma6.enable = true;
 
