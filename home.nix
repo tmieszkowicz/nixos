@@ -1,7 +1,6 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-
   imports = [
     ./programs/discord.nix
     ./programs/git.nix
@@ -11,7 +10,7 @@
     ./programs/spotify.nix
     ./programs/zed-editor.nix
     ./programs/mpv.nix
-    ./programs/development.nix
+    # ./programs/development.nix
     ./programs/ssh.nix
   ];
 
