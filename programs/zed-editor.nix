@@ -6,9 +6,11 @@
       "html"
       "nix"
       "csharp"
+      "ultraviolet-theme"
     ];
 
     userSettings = {
+      theme = "ultraViolet";
       vim_mode = true;
       format_on_save = "on";
       autosave = {
