@@ -38,6 +38,13 @@
           "ctrl-j" = "workspace::ActivatePaneDown";
         };
       }
+      {
+        context = "!Terminal && vim_mode != insert";
+        bindings = {
+          "tab" = "pane::ActivateNextItem";
+          "shift-tab" = "pane::ActivatePreviousItem";
+        };
+      }
     ];
   };
 }
