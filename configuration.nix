@@ -7,6 +7,7 @@
     ./core/steam.nix
     ./core/auto-upgrade.nix
     ./core/garbage-collection.nix
+    ./core/nvidia.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -64,12 +65,8 @@
     foot
   ];
 
-  hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.open = true;
-  hardware.nvidia.modesetting.enable = true;
-
   nixpkgs.config.allowUnfree = true;
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
