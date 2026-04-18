@@ -7,11 +7,17 @@
       "nix"
       "csharp"
       "ultraviolet-theme"
+      "charmed-icons"
     ];
 
     userSettings = {
+      ### THEMES ###
       theme = "ultraViolet";
+      icon_theme = "Base Charmed Icons";
+
       vim_mode = true;
+      relative_line_numbers = "enabled";
+
       format_on_save = "on";
       autosave = {
         after_delay = {
