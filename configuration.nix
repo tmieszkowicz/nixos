@@ -8,6 +8,7 @@
     ./core/auto-upgrade.nix
     ./core/garbage-collection.nix
     ./core/nvidia.nix
+    ./core/nvf.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -57,7 +58,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    neovim
     foot
   ];
 

@@ -7,6 +7,7 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf.url = "github:notashelf/nvf";
     # TODO: encryption
     # sops-nix = {
     #   url = "github:mic92/sops-nix";
@@ -16,22 +17,27 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }@inputs:
     {
-      nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
-          modules = [
-            ./configuration.nix
+      nixpkgs,
+      home-manager,
+      nvf,
+      ...
+    }:
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./configuration.nix
 
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
 
-              home-manager.users.wiqht = import ./home.nix;
-            }
-          ];
-        };
+            home-manager.users.wiqht = import ./home.nix;
+          }
+
+          nvf.nixosModules.default
+        ];
       };
     };
 }
