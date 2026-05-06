@@ -12,6 +12,7 @@
     ./modules/home/mpv.nix
     ./modules/home/ssh.nix
     ./modules/home/libreoffice.nix
+    ./modules/home/terminal.nix
   ];
 
   home.username = "wiqht";
