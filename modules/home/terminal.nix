@@ -24,5 +24,9 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
     };
+
+    starship = {
+      enable = true;
+    };
   };
 }
